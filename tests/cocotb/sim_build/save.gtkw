@@ -1,0 +1,36 @@
+[*]
+[*] GTKWave Analyzer v3.3.116 (w)1999-2023 BSI
+[*] Tue May 13 13:51:13 2025
+[*]
+[dumpfile] "/u/95/tod2/unix/ECD/toolTests/sby/FormalFIFO/tests/cocotb/sim_build/fifo.fst"
+[dumpfile_mtime] "Tue May 13 13:37:12 2025"
+[dumpfile_size] 1139
+[savefile] "/u/95/tod2/unix/ECD/toolTests/sby/FormalFIFO/tests/cocotb/sim_build/save.gtkw"
+[timestart] 0
+[size] 1854 1001
+[pos] -27 -24
+*-11.000000 7020 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[sst_width] 278
+[signals_width] 150
+[sst_expanded] 1
+[sst_vpaned_height] 297
+@28
+fifo.in_clk
+fifo.in_ren
+fifo.in_rst
+@22
+fifo.in_wdata[31:0]
+@28
+fifo.in_wen
+@24
+fifo.out_count[2:0]
+@28
+fifo.out_empty
+fifo.out_full
+@22
+fifo.out_rdata[31:0]
+@28
+fifo.r_addr[1:0]
+fifo.w_addr[1:0]
+[pattern_trace] 1
+[pattern_trace] 0
