@@ -15,7 +15,8 @@ module fifo #(
     output logic [ADDR_WIDTH:0]     out_count                 // Number of elements in the FIFO
 );
     
-    initial count = 0; 
+    initial count = 0;
+    initial out_rdata = 0;
 
     localparam ADDR_WIDTH   = $clog2(DEPTH);
 
@@ -47,10 +48,12 @@ module fifo #(
              for (int i = 0; i < DEPTH; i++) begin
                  mem[i] <= 0;
              end
-
+             out_rdata = 0;
          end else begin
              if (in_wen && !out_full)
                  mem[w_addr] <= in_wdata;
+             if (in_ren && !out_empty)
+                out_rdata = mem[r_addr];
          end
      end
 
@@ -64,13 +67,6 @@ module fifo #(
                  count <= count + 1;
              end
          end
-
-
-     always @(*) begin
-         out_rdata = 0;
-         if (in_ren && !out_empty)
-             out_rdata = mem[r_addr];
-     end
 
      `ifdef FORMAL
 

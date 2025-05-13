@@ -41,4 +41,9 @@ async def test_fifo(dut):
         dut.in_ren      = 1
         await ClockCycles(clock, 1)
     dut.in_wen = 0
+
+    # Some more reads
+    for i in range(5):
+        dut.in_ren      = 1
+        await ClockCycles(clock, 1)
     dut.in_ren = 0
