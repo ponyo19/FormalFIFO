@@ -1,0 +1,16 @@
+[tasks]
+bmc
+
+[options]
+bmc: mode bmc
+
+[engines]
+smtbmc boolector
+
+[script]
+read -sv -define FORMAL -formal fifo.sv
+prep -top fifo.sv
+
+[files]
+../../rtl/fifo.sv
+../../rtl/fifo_controller.sv
