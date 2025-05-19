@@ -8,8 +8,8 @@ bmc: mode bmc
 smtbmc boolector
 
 [script]
-read -sv -define FORMAL -formal fifo.sv
-prep -top fifo.sv
+read -sv -D FORMAL -formal fifo.sv fifo_controller.sv
+prep -top fifo
 
 [files]
 ../../rtl/fifo.sv
